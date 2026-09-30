@@ -7,7 +7,7 @@ from airflow.operators.bash import BashOperator
 dbt_environment = {
     "DBT_ACCOUNT": "{{ conn.snowflake_conn.extra_dejson['account'] }}",
     "DBT_USER": "{{ conn.snowflake_conn.login }}",
-    "DBT_ROLE": "{{ conn.snowflake_conn.extra_dejson['role'] }}",
+    "DBT_ROLE": "WEATHER_LAB_ROLE",
     "DBT_WAREHOUSE": "{{ conn.snowflake_conn.extra_dejson['warehouse'] }}",
     "DBT_PRIVATE_KEY_PASSPHRASE": "{{ conn.snowflake_conn.password }}",
 }
