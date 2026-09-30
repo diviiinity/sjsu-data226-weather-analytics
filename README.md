@@ -103,7 +103,21 @@ The dbt snapshot tracks historical changes to weather records.
 
 ## Dashboard
 
-The Preset dashboard visualizes weather metrics for Portland and Austin. Dashboard details, screenshots, and the dashboard link will be added after the dashboard is finalized.
+Built in Preset (hosted Apache Superset) on `DEMO_DB.ANALYTICS.WEATHER_METRICS`, the table created by dbt.
+
+**Charts**
+- Daily Temperature vs 7-Day Moving Average
+- Daily Temperature Anomaly by City
+- Daily and 7-Day Rolling Rainfall by City
+- Dry Spell Length by City
+
+**Filters:** City and Date range. Metrics are precomputed in dbt, so filters change what is shown, not how the metrics are calculated.
+
+![Full dashboard](screenshots/01_dashboard_full.png)
+
+![Dashboard filtered to Portland, September](screenshots/06_dashboard_filtered_portland_sept.png)
+
+Screenshots of each chart are in the [screenshots](screenshots/) folder. The dashboard is in a private Preset workspace, so screenshots are included instead of a link.
 
 ## Security
 
